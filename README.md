@@ -1,6 +1,10 @@
 <h1 align="center">
-  Typescript Storybook Project Template
+  Typescript React Storybook Project Template
 </h1>
+
+## About
+
+Project starter template that can be extended to quickly build a Storybook.js React UI component library in TypeScript. This template includes the ability to deploy to GitHub Pages, publish npm package to GitHub packages and deploy pull-request preview environments in Chromatic.
 
 ## View Storybook
 
