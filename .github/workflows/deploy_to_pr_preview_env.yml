@@ -1,0 +1,16 @@
+name: Deploy to PR Preview Environment.
+# Trigger on creation of pull-request to merge into master branch.
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - run: yarn
+      - run: npx chromatic --project-token=${{ secrets.CHROMATIC_PR_PREVIEW_ENV_TOKEN }} --exit-zero-on-changes
