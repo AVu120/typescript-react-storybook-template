@@ -12,15 +12,54 @@ Access [live QA environment](https://avu120.github.io/typescript-react-storybook
 
 ## Contribute to Storybook.
 
-1. Increment the [semantic versioning](https://semver.org/) in the package.json file to reflect the changes you have made.
-2. Create a pull-request (PR) to merge your feature branch into main branch.
-3. Have relevant stakeholders inspect code/DOM/component/visual/story changes in the Chromatic PR preview environment.
-4. After all changes have been approved in Chromatic & the PR has been approved on GitHub, merge & squash the PR into main.
+### Publish to GitHub Package
 
-### GitHub Actions Workflows
+1. Include
 
-- On the completion of step 4, a new public npm registry package or private GitHub package containing your changes will be published (depending on which of .github\workflows\publish_github_package.yml or .github\workflows\publish_to_npm_registry.yml is enabled).
-- The updated Storybook will also be deployed to the [live QA environment](https://avu120.github.io/typescript-react-storybook-template/?path=/story/example-introduction--page) (if .github\workflows\deploy_to_qa_env.yml is enabled).
+```
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+```
+
+in the package.json.
+
+2. In package.json, change value of "name" field to `@<GitHub-account-that-owns-repo>/typescript-react-storybook-template`. In the case of [my repo](https://github.com/AVu120/typescript-react-storybook-template), that would be
+
+```
+  "name": "@AVu120/typescript-react-storybook-template",
+```
+
+3. Enable GitHub Action workflow: .github\workflows\publish_github_package.yml (read comments in that file for instructions on how to enable it).
+
+### Publish to NPM Registry
+
+1. Exclude
+
+```
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+```
+
+from package.json.
+
+2. In package.json, change value of "name" field to `@<npm-account-username>/typescript-react-storybook-template`. In the case of [my profile](https://www.npmjs.com/~anthonyhienvu) in which I want to publish to https://www.npmjs.com/package/@anthonyhienvu/typescript-react-storybook-template, that would be
+
+```
+"name": "@anthonyhienvu/typescript-react-storybook-template"
+```
+
+3. Enable GitHub Action workflow: .github\workflows\publish_to_npm_registry.yml (read comments in that file for instructions on how to enable it).
+
+4. Increment the [semantic versioning](https://semver.org/) in the package.json file to reflect the changes you have made.
+5. Create a pull-request (PR) to merge your feature branch into main branch.
+6. Have relevant stakeholders inspect code/DOM/component/visual/story changes in the Chromatic PR preview environment.
+7. After all changes have been approved in Chromatic & the PR has been approved on GitHub, merge & squash the PR into main.
+
+### Update Live QA Environment
+
+On completion of step 7, the updated Storybook will also be automatically deployed to the [live QA environment](https://avu120.github.io/typescript-react-storybook-template/?path=/story/example-introduction--page) (if .github\workflows\deploy_to_qa_env.yml is enabled).
 
 ## Consume from Storybook
 
