@@ -20,6 +20,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: yarn
       - run: yarn build
-      - run: yarn publishOnly
+      - run: cp package.json lib
+      - run: yarn privatePublish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
