@@ -2,9 +2,9 @@ name: Publish to GitHub Packages
 on:
   push:
     branches:
-      # Changed to master to disable this workflow as currently the default branch is main and there's no branch called master.
+      # Change this to master to disable this workflow as currently the default branch is main and there's no branch called master.
       # Change this to main to re-enable this workflow.
-      - master
+      - main
 
 jobs:
   publish-gpr:
