@@ -17,7 +17,7 @@ Access [live QA environment](https://avu120.github.io/typescript-react-storybook
 3. Have relevant stakeholders inspect code/DOM/component/visual/story changes in the Chromatic PR preview environment.
 4. After all changes have been approved in Chromatic & the PR has been approved on GitHub, merge & squash the PR into master.
 
-- On the completion of step 4, a new npm package containing your changes will be published to this repository's GitHub Packages.
+- On the completion of step 4, a new public npm registry package or private GitHub package containing your changes will be published (depending on which of the corresponding GitHub Action workflows are enabled).
 - The updated Storybook will also be deployed to the [live QA environment](https://avu120.github.io/typescript-react-storybook-template/?path=/story/example-introduction--page).
 
 ## Consume from Storybook
