@@ -1,8 +1,8 @@
-name: Publish to GitHub Packages
+name: Deploy to QA Environment (on GitHub Pages)
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   publish-gpr:
