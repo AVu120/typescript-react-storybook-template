@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/AVu120/typescript-react-storybook-template.git"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "author": "AVu120 <avu120@gmail.com>",
   "devDependencies": {
     "@babel/core": "^7.15.0",
