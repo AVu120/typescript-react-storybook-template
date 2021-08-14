@@ -27,5 +27,12 @@ export const InfoAgain = Template.bind({});
 InfoAgain.args = {
   ...Primary.args,
   primary: false,
-  label: "Info again!!!@!!!!!!!!!!@ again22",
+  label: "Info again",
+};
+
+export const InfoAgainAgain = Template.bind({});
+InfoAgainAgain.args = {
+  ...Primary.args,
+  primary: false,
+  label: "Info again again",
 };
