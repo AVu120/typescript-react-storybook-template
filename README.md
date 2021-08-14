@@ -61,7 +61,7 @@ from package.json.
 
 ### Update Live QA Environment
 
-On completion of step 7, the updated Storybook will also be automatically deployed to the [live QA environment](https://avu120.github.io/typescript-react-storybook-template/?path=/story/example-introduction--page) (if .github\workflows\deploy_to_qa_env.yml is enabled).
+On completion of step 8, the updated Storybook will also be automatically deployed to the [live QA environment](https://avu120.github.io/typescript-react-storybook-template/?path=/story/example-introduction--page) (if .github\workflows\deploy_to_qa_env.yml is enabled).
 
 ## Consume from Storybook
 
