@@ -63,11 +63,22 @@ from package.json.
 7. Have relevant stakeholders inspect code/DOM/component/visual/story changes in the Chromatic PR preview environment. You can access this PR preview environment by going to the pull-request page:
 
 - Click on the 'Details' link.
+
   ![image](https://user-images.githubusercontent.com/38395166/129433150-e74e28c7-43f3-4c22-9eb4-a7d88b6bef47.png)
+
 - Click on one of the links below to see the full updated Storybook or only the PR changes deployed in Chromatic.
+
   ![image](https://user-images.githubusercontent.com/38395166/129433211-9f58e142-6153-4240-a7ae-b08bc950686e.png)
 
-8. After all the changes have been approved in Chromatic & the PR has been approved on GitHub, merge & squash the PR into main.
+- If you open the build details on Chromatic, you'll see a summary of the changes in the PR:
+
+![image](https://user-images.githubusercontent.com/38395166/129433852-107b1d3a-d627-44e1-a9e1-86332393288f.png)
+
+- Click on the 'Review changes' button to drill-down into each change.
+
+![image](https://user-images.githubusercontent.com/38395166/129433895-e2f2ebb5-af71-4a45-9d82-3b6735df277a.png)
+
+8. After all the changes have been accepted in Chromatic & the PR has been approved on GitHub by relevant stakeholders, merge & squash the PR into main.
 
 ### Update Live QA Environment
 
