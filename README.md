@@ -56,7 +56,10 @@ from package.json.
 
 5. Increment the [semantic versioning](https://semver.org/) in the package.json file to reflect the changes you have made.
 6. Create a pull-request (PR) to merge your feature branch into main branch.
-7. Have relevant stakeholders inspect code/DOM/component/visual/story changes in the Chromatic PR preview environment.
+7. Have relevant stakeholders inspect code/DOM/component/visual/story changes in the Chromatic PR preview environment. You can access this PR preview environment by going to the pull-request page:
+
+- Click on the 'Details' link.
+  ![image](https://user-images.githubusercontent.com/38395166/129433150-e74e28c7-43f3-4c22-9eb4-a7d88b6bef47.png)
 
 8. After all changes have been approved in Chromatic & the PR has been approved on GitHub, merge & squash the PR into main.
 
